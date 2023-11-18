@@ -8,9 +8,9 @@ export default function Songplay() {
   
   let [animator2 , setanimator ] = useState(null)
   let [animator1 , setanimator2 ] = useState(null)
-  let [number11, setNumber1] = useState(100);
-  let [number22, setNumber2] = useState(100);
-  let [number33, setNumber3] = useState(0);
+  let [number11, setNumber1] = useState(10);
+  let [number22, setNumber2] = useState(10);
+  let [number33, setNumber3] = useState(10);
 
 let start  = ()=>{
   
@@ -34,12 +34,12 @@ let start  = ()=>{
 
   function foroneandthree() {
   
-    if(number11==100){
+    if(number11==10){
         setNumber1(number11=0)
-        setNumber3(number22 = 100)
+        setNumber3(number22 = 10)
     }
     else if(number11==0){
-        setNumber1(number11=100)
+        setNumber1(number11=10)
         setNumber3(number33=0)
 
     }
@@ -47,11 +47,11 @@ let start  = ()=>{
   }
 
   function fortwo() {
-    if(number22==100){
-       setNumber2(number2=0)
+    if(number22==10){
+       setNumber2(number22=0)
     }
     else if(number22==0){
-        setNumber2(number22 = 100)
+        setNumber2(number22 = 10)
       
     }
   }
@@ -77,8 +77,8 @@ let start  = ()=>{
 
 
   let playses  =         <div style={{  display: 'flex' }}>
-  <div style={{ width: '5px', height: '15px', backgroundColor: "#603fef",  }}></div>
-  <div style={{ width: '5px', height: '15px', backgroundColor: "#603fef", marginLeft: '5px' }}></div>
+  <div style={{ width: '5px', height: '15px', backgroundColor: "white",  }}></div>
+  <div style={{ width: '5px', height: '15px', backgroundColor: "white", marginLeft: '5px' }}></div>
 </div>
 
 let pauses =<div style={{
@@ -88,7 +88,7 @@ let pauses =<div style={{
   height: "0",
   borderLeft: "10px solid transparent",
   borderRight: "10px solid transparent",
-  borderBottom: "10px solid #603fef"
+  borderBottom: "10px solid white"
      }}></div>
 
 let array = [ pauses ,  playses ]
@@ -112,9 +112,7 @@ let [number , setnumber] =  useState(0)
   
   };
 
- function pause(){
-    audioRef.current.pause();
-  };
+
    let [number2 , setnumber2] = useState(0)
 
   const prevrivious = () => {
@@ -134,14 +132,14 @@ setselectedsongs([data[number2]])
    
   };
 
-let animation  = <div style={{ display: "flex", transform: "rotate(180deg)" , width:"100%"    }}>
+let animation  = <div style={{ display: "flex", transform: "rotate(180deg)", height:"50px", margin:"3%"}}>
 <div
   style={{
     marginLeft: "1%",
     transition: "all 0.2s ease",
     width: "5px",
     height: `${number11}px`,
-    backgroundColor: "blue",
+    backgroundColor: "#603fef"
   }}
 ></div>
 <div
@@ -150,7 +148,7 @@ let animation  = <div style={{ display: "flex", transform: "rotate(180deg)" , wi
     transition: "all 0.2s ease",
     width: "5px",
     height: `${number22}px`,
-    backgroundColor: "blue",
+    backgroundColor: "#603fef"
   }}
 ></div>
 <div
@@ -159,23 +157,24 @@ let animation  = <div style={{ display: "flex", transform: "rotate(180deg)" , wi
     transition: "all 0.2s ease",
     width: "5px",
     height: `${number33}px`,
-    backgroundColor: "blue",
+    backgroundColor: "#603fef"
   }}
 ></div>
 </div>
   return (
 <div >
 
-{animation}
+
      <div >
-     <div className="nameofmusic" style={{ color: "white" }}>
-          <h3>Yakeen</h3>
-        </div>
+
+
         <div className="pictureofmusic">
+        {animation}
           <img style={{ width: "100%", height: "80%" }} src={selectsong[0].img} alt={selectsong[0].nameofsong} />
+     
         </div>
         <div className="Textofmusic" style={{ color: "white" }}>
-          <p style={{ fontSize: "60%" }}>{selectsong[0].nameofsong}</p>
+          <p style={{ fontSize: "60%" }}>{selectsong[0].nameofsong}  </p>
         </div>
      </div>
 
@@ -230,7 +229,7 @@ let animation  = <div style={{ display: "flex", transform: "rotate(180deg)" , wi
            alignItems:"center", justifyItems:"center",
            justifyContent:"center",
            width:"50px" , height:"50px" , 
-           backgroundColor:"white" , 
+           border:" 2px solid white" , 
            borderRadius:"100%"}}>
           
   {array[number]}
