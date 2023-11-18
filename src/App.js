@@ -7,7 +7,6 @@ import Songplay from "./coponents/songsplay";
 import Category from "./coponents/categories";
 import TopCharts from "./coponents/topcharts";
 import Searchbar from "./coponents/input";
-import Musicanimation from "./coponents/musicanimation";
 
 function App() {
   return (
@@ -33,17 +32,17 @@ function App() {
                 <div>
                   <Songbar />
                 </div>
-                <div style={{marginTop:"5%",    display:"flex",width:"90%" ,flexWrap:"wrap"}} >
+                
                 <TopCharts />
-                </div>
+     
               </div>
-              <div style={{width:"100%"  , backgroundColor:"rgb(40, 40, 43)" , height:"10%" , alignContent:"center" , alignItems:"center" , justifyContent:"center"}} >
+
                 <Songplay />
-              </div>
+              
             </div>
           </div>
         </div>
-        <Musicanimation></Musicanimation>
+       
       </div>
       
     </MyContextProvider>

@@ -15,6 +15,24 @@ import ahmedjahangir  from "../songs/Singer Ahmed Jahanzeb.m4a"
 
 let Mycontextdata =  createContext()
 export default function Mycontextprovider({children}){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     let singers = [
         {name:"elie goudlin",
          img:eliegodline,
@@ -27,11 +45,7 @@ export default function Mycontextprovider({children}){
          Audio:zain
          },
         
-        {name:"asim azhar",
-         img:asimazhar,
-         nameofsong:"",
-         Audio:""
-         },
+       
         {name:"tailor swift",
          img:tailswift,
          nameofsong:"we dont talk",

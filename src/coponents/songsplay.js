@@ -6,7 +6,8 @@ export default function Songplay() {
 
 
   
-  
+  let [animator2 , setanimator ] = useState(null)
+  let [animator1 , setanimator2 ] = useState(null)
   let [number11, setNumber1] = useState(100);
   let [number22, setNumber2] = useState(100);
   let [number33, setNumber3] = useState(0);
@@ -15,10 +16,12 @@ let start  = ()=>{
   
   const interval1 = setInterval(() => {
     foroneandthree();
+    setanimator(interval1)
   }, 1000);
 
   const interval2 = setInterval(() => {
     fortwo();
+    setanimator2(interval2)
   }, 100);
 
   // Clean up intervals when the component unmounts
@@ -67,7 +70,7 @@ let start  = ()=>{
 
 
 
-  const { data   ,selectsong , setfunction  , setselectedsongs} = useContext(Mycontextdata);
+  const { data   ,selectsong   , setselectedsongs} = useContext(Mycontextdata);
   const audioRef = useRef();
   
 
@@ -96,12 +99,15 @@ let [number , setnumber] =  useState(0)
 
     if(number===0){
         setnumber(number+=1) 
+        start()
         audioRef.current.src = selectsong[0].Audio;
      audioRef.current.play(); 
     }
    else if(number===1){
         setnumber(number-=1)
         audioRef.current.pause();
+        clearInterval(animator1)
+        clearInterval(animator2)
       }
   
   };
@@ -128,39 +134,39 @@ setselectedsongs([data[number2]])
    
   };
 
-
+let animation  = <div style={{ display: "flex", transform: "rotate(180deg)" , width:"100%"    }}>
+<div
+  style={{
+    marginLeft: "1%",
+    transition: "all 0.2s ease",
+    width: "5px",
+    height: `${number11}px`,
+    backgroundColor: "blue",
+  }}
+></div>
+<div
+  style={{
+    marginLeft: "1%",
+    transition: "all 0.2s ease",
+    width: "5px",
+    height: `${number22}px`,
+    backgroundColor: "blue",
+  }}
+></div>
+<div
+  style={{
+    marginLeft: "1%",
+    transition: "all 0.2s ease",
+    width: "5px",
+    height: `${number33}px`,
+    backgroundColor: "blue",
+  }}
+></div>
+</div>
   return (
 <div >
-<div style={{ display: "flex", transform: "rotate(180deg)" , width:"100%"    }}>
-      <div
-        style={{
-          marginLeft: "1%",
-          transition: "all 0.2s ease",
-          width: "5px",
-          height: `${number11}px`,
-          backgroundColor: "blue",
-        }}
-      ></div>
-      <div
-        style={{
-          marginLeft: "1%",
-          transition: "all 0.2s ease",
-          width: "5px",
-          height: `${number22}px`,
-          backgroundColor: "blue",
-        }}
-      ></div>
-      <div
-        style={{
-          marginLeft: "1%",
-          transition: "all 0.2s ease",
-          width: "5px",
-          height: `${number33}px`,
-          backgroundColor: "blue",
-        }}
-      ></div>
-    </div>
 
+{animation}
      <div >
      <div className="nameofmusic" style={{ color: "white" }}>
           <h3>Yakeen</h3>
