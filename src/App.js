@@ -7,6 +7,7 @@ import Songplay from "./coponents/songsplay";
 import Category from "./coponents/categories";
 import TopCharts from "./coponents/topcharts";
 import Searchbar from "./coponents/input";
+import Musicanimation from "./coponents/musicanimation";
 
 function App() {
   return (
@@ -42,7 +43,9 @@ function App() {
             </div>
           </div>
         </div>
+        <Musicanimation></Musicanimation>
       </div>
+      
     </MyContextProvider>
   );
 }

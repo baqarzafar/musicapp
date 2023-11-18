@@ -3,6 +3,70 @@ import { Mycontextdata } from "../store/context";
 import { useState } from "react";
 
 export default function Songplay() {
+
+
+  
+  
+  let [number11, setNumber1] = useState(100);
+  let [number22, setNumber2] = useState(100);
+  let [number33, setNumber3] = useState(0);
+
+let start  = ()=>{
+  
+  const interval1 = setInterval(() => {
+    foroneandthree();
+  }, 1000);
+
+  const interval2 = setInterval(() => {
+    fortwo();
+  }, 100);
+
+  // Clean up intervals when the component unmounts
+  return () => {
+    clearInterval(interval1);
+    clearInterval(interval2);
+  };
+}
+
+
+  function foroneandthree() {
+  
+    if(number11==100){
+        setNumber1(number11=0)
+        setNumber3(number22 = 100)
+    }
+    else if(number11==0){
+        setNumber1(number11=100)
+        setNumber3(number33=0)
+
+    }
+ 
+  }
+
+  function fortwo() {
+    if(number22==100){
+       setNumber2(number2=0)
+    }
+    else if(number22==0){
+        setNumber2(number22 = 100)
+      
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const { data   ,selectsong , setfunction  , setselectedsongs} = useContext(Mycontextdata);
   const audioRef = useRef();
   
@@ -67,6 +131,35 @@ setselectedsongs([data[number2]])
 
   return (
 <div >
+<div style={{ display: "flex", transform: "rotate(180deg)" , width:"100%"    }}>
+      <div
+        style={{
+          marginLeft: "1%",
+          transition: "all 0.2s ease",
+          width: "5px",
+          height: `${number11}px`,
+          backgroundColor: "blue",
+        }}
+      ></div>
+      <div
+        style={{
+          marginLeft: "1%",
+          transition: "all 0.2s ease",
+          width: "5px",
+          height: `${number22}px`,
+          backgroundColor: "blue",
+        }}
+      ></div>
+      <div
+        style={{
+          marginLeft: "1%",
+          transition: "all 0.2s ease",
+          width: "5px",
+          height: `${number33}px`,
+          backgroundColor: "blue",
+        }}
+      ></div>
+    </div>
 
      <div >
      <div className="nameofmusic" style={{ color: "white" }}>
