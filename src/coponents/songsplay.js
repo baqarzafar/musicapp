@@ -88,7 +88,7 @@ let pauses =<div style={{
   height: "0",
   borderLeft: "10px solid transparent",
   borderRight: "10px solid transparent",
-  borderBottom: "10px solid white"
+  borderBottom: "20px solid white"
      }}></div>
 
 let array = [ pauses ,  playses ]
@@ -207,9 +207,9 @@ let animation  = <div style={{ display: "flex", transform: "rotate(180deg)", hei
   transform:"rotate(270deg)",          
   width: "0",
   height: "0",
-  borderLeft: "10px solid transparent",
-  borderRight: "10px solid transparent",
-  borderBottom: "10px solid white"
+  borderLeft: "8px solid transparent",
+  borderRight: "8px solid transparent",
+  borderBottom: "8px solid white"
      }}></div>
 
 <button style={{background:"none" , border:"none"}} onClick={prevrivious}>
@@ -217,9 +217,9 @@ let animation  = <div style={{ display: "flex", transform: "rotate(180deg)", hei
   transform:"rotate(270deg)",          
   width: "0",
   height: "0",
-  borderLeft: "20px solid transparent",
-  borderRight: "20px solid transparent",
-  borderBottom: "20px solid white"
+  borderLeft: "15px solid transparent",
+  borderRight: "15px solid transparent",
+  borderBottom: "15px solid white"
      }}></div>
 </button>
          <button  onClick={plays} style={{
@@ -240,9 +240,9 @@ let animation  = <div style={{ display: "flex", transform: "rotate(180deg)", hei
   transform:"rotate(90deg)",          
   width: "0",
   height: "0",
-  borderLeft: "20px solid transparent",
-  borderRight: "20px solid transparent",
-  borderBottom: "20px solid white"
+  borderLeft: "15px solid transparent",
+  borderRight: "15px solid transparent",
+  borderBottom: "15px solid white"
      }}></div>
   </button>
          
@@ -250,9 +250,9 @@ let animation  = <div style={{ display: "flex", transform: "rotate(180deg)", hei
   transform:"rotate(90deg)",          
   width: "0",
   height: "0",
-  borderLeft: "10px solid transparent",
-  borderRight: "10px solid transparent",
-  borderBottom: "10px solid white"
+  borderLeft: "8px solid transparent",
+  borderRight: "8px solid transparent",
+  borderBottom: "8 px solid white"
      }}></div>
          
          </div>
