@@ -43,6 +43,10 @@ export default function Searchbar() {
         } }
         
       />
+
+
+      <img  style={{ marginLeft:"10%",   width:"10%" , borderRadius:"100%"}}  src="https://avatars.githubusercontent.com/u/75995372?v=4"  ></img>
+
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import NavbarButton from "./javabarbutton";
 export default function Navebar(params) {
-     let [numberfull , setnumberfull]   = useState(0 )
-     let [display, setdisplay]   = useState("default")
+     let [numberfull , setnumberfull]   = useState(0)
+     let [display, setdisplay]   = useState("none")
+     let [widths, setdwidth]   = useState("default")
+     let [heights, setheight]   = useState("default")
 
 
 let full = ()=>{
@@ -11,10 +13,14 @@ let full = ()=>{
 setnumberfull(    numberfull =1)
  setdisplay(   display = "block")
 
+
   }
   else if(numberfull===1){
     setnumberfull(numberfull=0)
  setdisplay(   display = "none")
+ setdwidth(widths = "")
+ setdwidth(heights = "")
+
   }
 }
 
@@ -34,19 +40,20 @@ setnumberfull(    numberfull =1)
         color: "white",
  
   
-   
-    
-      
+        position:"absolute",
+        transition:" display   2s   ease",
+        width:widths,
+        height:heights,
         padding:"1%"
       }}
     >
      {navebarbutton} 
-   <div style={{display:display}}>
+   <div style={{display:display , margin:"10%"}}>
    <div style={{ margin: "20%", marginTop: "10%" }}>
         <div style={{ color:"#603fef" ,  marginTop: "1%", fontSize: "16px", fontWeight: "bold" }}>
           Categories
         </div>
-        <div style={{ marginTop: "5%", fontSize: "14px" }}>Aerial</div>
+        <div style={{  marginTop: "5%", fontSize: "14px" }}>Aerial</div>
         <div style={{ marginTop: "5%", fontSize: "14px" }}>Rock</div>
         <div style={{ marginTop: "5%", fontSize: "14px" }}>Pop</div>
         <div style={{ marginTop: "5%", fontSize: "14px" }}>Classic</div>
