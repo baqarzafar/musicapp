@@ -7,6 +7,7 @@ import Songplay from "./coponents/songsplay";
 import Category from "./coponents/categories";
 import TopCharts from "./coponents/topcharts";
 import Searchbar from "./coponents/input";
+import Navabarbutton from "./coponents/javabarbutton";
 
 function App() {
   return (
@@ -39,10 +40,12 @@ function App() {
 
                 <Songplay />
               
+              
             </div>
+       
           </div>
         </div>
-       
+      
       </div>
       
     </MyContextProvider>

@@ -1,17 +1,48 @@
+import React, { useContext, useEffect, useRef, useState } from "react";
+import NavbarButton from "./javabarbutton";
 export default function Navebar(params) {
+     let [numberfull , setnumberfull]   = useState(0 )
+     let [display, setdisplay]   = useState("default")
+
+
+let full = ()=>{
+  console.log('hello world')
+  if(numberfull===0){
+setnumberfull(    numberfull =1)
+ setdisplay(   display = "block")
+
+  }
+  else if(numberfull===1){
+    setnumberfull(numberfull=0)
+ setdisplay(   display = "none")
+  }
+}
+
+
+
+  let navebarbutton =   <button   onClick={full}               style={{background:"none" , border:"none" }}>
+      <div  style={{display:"flex " , flexDirection:"row",flexWrap:"wrap" , width:"30px"}}>
+  <div style={{ width: "10px", height: "10px", border: "1px solid #603fef" }}></div>
+  <div style={{ width: "10px", height: "10px", border: "1px solid  #603fef" }}></div>
+  <div style={{ width: "10px", height: "10px", border: "1px solid  #603fef" }}></div>
+  <div style={{ width: "10px", height: "10px", border: "1px solid  #603fef" }}></div>
+</div>
+  </button>
   return (
-    <div
+    <div  
       style={{
         color: "white",
  
+  
+   
+    
       
-        backgroundColor: "rgb(40, 40, 43)",
-        height: "100%",
-        width: "20%",
         padding:"1%"
       }}
     >
-      <div style={{ margin: "20%", marginTop: "10%" }}>
+     {navebarbutton} 
+   <div style={{display:display}}>
+   <div style={{ margin: "20%", marginTop: "10%" }}>
         <div style={{ color:"#603fef" ,  marginTop: "1%", fontSize: "16px", fontWeight: "bold" }}>
           Categories
         </div>
@@ -37,6 +68,7 @@ export default function Navebar(params) {
         <div style={{ marginTop: "5%", fontSize: "14px" }}>Charts now</div>
         <div style={{ marginTop: "5%", fontSize: "14px" }}>Records yours</div>
       </div>
+   </div>
     </div>
   );
 }

@@ -252,7 +252,7 @@ let animation  = <div style={{ display: "flex", transform: "rotate(180deg)", hei
   height: "0",
   borderLeft: "8px solid transparent",
   borderRight: "8px solid transparent",
-  borderBottom: "8 px solid white"
+  borderBottom: "8px solid white"
      }}></div>
          
          </div>
